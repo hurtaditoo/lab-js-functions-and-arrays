@@ -32,7 +32,14 @@ function findLongestWord(arrayOfWords) {
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(arrayOfNumbers) {
+    let sum = 0;
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        const number = arrayOfNumbers[i];
+        sum += number;
+    }
+    return sum;
+}
 
 
 
@@ -40,7 +47,13 @@ function sumNumbers() {}
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arrayOfNumbers) {
+    let average = 0;
+    if (arrayOfNumbers.length === 0) {
+        return 0;
+    }
+    return sumNumbers(arrayOfNumbers) / arrayOfNumbers.length;
+}
 
 
 
@@ -48,4 +61,9 @@ function averageNumbers() {}
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-function doesWordExist() {}
+function doesWordExist(arrayOfWords, wordToSearch) {
+    if (arrayOfWords.length === 0) {
+        return null;
+    }
+    return arrayOfWords.includes(wordToSearch);
+}
